@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Sign-up Form</title>
 </head>
@@ -21,19 +24,40 @@
         <div class="section section1">
             <p id="quote">This is not a real online service! You know you need something like this in
                 your life to help you realize your deepest dreams. <br>
-                Sign up now to get started.
+                Sign up <em>now</em> to get started.
                 <br>
                 <br>
-                You know what you want to.
+                You <em>know </em>what you want to.
             </p>
         </div>
         <div class="section section2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error iure beatae nam fugit voluptatibus repudiandae quisquam, adipisci vitae doloremque distinctio!
+            <form action="results.html" method="GET" id="myForm">
+                <legend>Let's do this!</legend>
+                <div>
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" name="first-name" id="firstName" placeholder="John" required>
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" name="last-name" id="lastName" placeholder="Doe" required>
+                </div>
+                <div>
+                    <label for="mail">EMAIL</label>
+                    <input type="email" name="email" id="mail" placeholder="email@example.com" required>
+                    <label for="phoneNumber">PHONE NUMBER</label>
+                    <input type="tel" name="phone" id="phoneNumber" maxlength="10">
+                </div>
+                <div>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" required>
+                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirm-password" id="confirmPassword" required>
+                </div>
+            </form>
         </div>
         <div class="section section3">
-            <button id="caBtn">Create Account</button>
-            <p><strong id="texto">Already have an account?</strong> <a href="#">Log in</a></p>
+            <button id="caBtn" type="submit" form="myForm" value="Update">Create Account</button>
+            <p><strong id="texto">Already have an account?</strong> <a href="#" id="loginLink" target="_blank">Log in</a></p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
